@@ -40,3 +40,72 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// My Code
+
+// Nav Bar
+document.querySelector('nav a:nth-of-type(1)').textContent = siteContent["nav"]["nav-item-1"]
+document.querySelector('nav a:nth-of-type(2)').textContent = siteContent["nav"]["nav-item-2"]
+document.querySelector('nav a:nth-of-type(3)').textContent = siteContent["nav"]["nav-item-3"]
+document.querySelector('nav a:nth-of-type(4)').textContent = siteContent["nav"]["nav-item-4"]
+document.querySelector('nav a:nth-of-type(5)').textContent = siteContent["nav"]["nav-item-5"]
+document.querySelector('nav a:nth-of-type(6)').textContent = siteContent["nav"]["nav-item-6"]
+
+// document.getElementsByTagName('nav a').style.color = 'green';
+// document.querySelectorAll('nav a').style.color = 'green';
+
+// Top Section
+document.querySelector('h1').textContent = siteContent['cta']['h1']
+document.querySelector('button').textContent = siteContent['cta']['button']
+document.querySelector('#cta-img').setAttribute('src', siteContent['cta']['img-src'])
+
+// Middle Section
+
+document.querySelector('.top-content .text-content:nth-of-type(1) h4').textContent = siteContent["main-content"]["features-h4"];
+document.querySelector('.text-content:nth-of-type(1) p').textContent = siteContent["main-content"]["features-content"];
+
+document.querySelector('.top-content .text-content:nth-of-type(2) h4').textContent = siteContent["main-content"]["about-h4"];
+document.querySelector('.text-content:nth-of-type(2) p').textContent = siteContent["main-content"]["about-content"];
+
+document.querySelector('.middle-img').setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+document.querySelector('.bottom-content .text-content:nth-of-type(1) h4').textContent = siteContent["main-content"]["services-h4"];
+document.querySelector('.bottom-content .text-content:nth-of-type(1) p').textContent = siteContent["main-content"]["services-content"];
+
+document.querySelector('.bottom-content .text-content:nth-of-type(2) h4').textContent = siteContent["main-content"]["product-h4"];
+document.querySelector('.bottom-content .text-content:nth-of-type(2) p').textContent = siteContent["main-content"]["product-content"];
+
+document.querySelector('.bottom-content .text-content:nth-of-type(3) h4').textContent = siteContent["main-content"]["vision-h4"];
+document.querySelector('.bottom-content .text-content:nth-of-type(3) p').textContent = siteContent["main-content"]["vision-content"];
+
+// Bottom Section
+
+document.querySelector('.contact h4').textContent = siteContent['contact']['contact-h4'];
+document.querySelector('.contact p:nth-of-type(1)').textContent = siteContent['contact']['address'];
+document.querySelector('.contact p:nth-of-type(2)').textContent = siteContent['contact']['phone'];
+document.querySelector('.contact p:nth-of-type(3)').textContent = siteContent['contact']['email'];
+
+document.querySelector('footer').textContent = siteContent['footer']['copyright'];
+
+// Styles and Adding Items
+
+const newNavItem = document.createElement('a');
+
+newNavItem.textContent = "Link"
+
+const addOne = document.querySelector('nav')
+addOne.append(newNavItem)
+
+const newNavItem2 = document.createElement('a');
+
+newNavItem2.textContent = "Link 2"
+
+addOne.prepend(newNavItem2)
+
+const x = document.querySelectorAll('a');
+x.forEach((item) => {
+  item.style.color = 'green';
+});
+
+document.querySelector('h1').style.maxWidth = "40%";
+document.querySelector('h1').style.textAlign = "center";
